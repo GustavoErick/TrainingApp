@@ -8,7 +8,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.trainingapp.models.Exercise
@@ -36,13 +35,13 @@ fun ExerciseListItem(exercise: Exercise, onExerciseSelected: (Exercise) -> Unit)
                         .size(80.dp)
                         .clip(CircleShape)
                 )
-                Spacer(modifier = Modifier.width(16.dp))
+                Spacer( modifier = Modifier.width(16.dp) )
                 Column {
                     Text(text = exercise.name, style = MaterialTheme.typography.titleMedium)
                     Text(text = exercise.muscleGrouping, style = MaterialTheme.typography.bodySmall)
                 }
             }
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer( modifier = Modifier.height(16.dp) )
             Text(
                 text = exercise.description,
                 style = MaterialTheme.typography.bodyMedium
